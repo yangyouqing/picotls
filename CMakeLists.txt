@@ -97,6 +97,7 @@ SET(TEST_EXES test-minicrypto.t)
 SET(PTLSBENCH_LIBS
     picotls-minicrypto picotls-core)
 
+SET(OPENSSL_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../openssl)
 FIND_PACKAGE(OpenSSL)
 IF (OPENSSL_FOUND AND NOT (OPENSSL_VERSION VERSION_LESS "1.0.1"))
     MESSAGE(STATUS "  Enabling OpenSSL support")
